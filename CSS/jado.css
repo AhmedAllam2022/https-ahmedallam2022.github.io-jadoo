@@ -96,15 +96,13 @@ div.random-color img {
     height: 70px;
 }
 ul.links a {
-	display: block;
-	color: #212832;
-	text-decoration: none;
-    padding: 9px 22px;
+    display: block;
+    color: #212832;
+    text-decoration: none;
+    padding: 9px 20px;
     transition: 0.2s;
     border-radius: 5px;
-}
-ul.links a:not(:last-child) {
-    margin-right: 10px;
+    margin-top: 10px;
 }
 a.logo {
     width: 103.69px;
@@ -151,15 +149,23 @@ li.language {
     .top-nav ul.links {
         display: block
     }
-    ul.links li {
-        margin-top: 10px;
-        padding: 8px;
+    ul.links a {
+        text-align: center;
+    }
+    ul.links a:last-child li {
+        margin-left: auto;
+        margin-right: auto;
     }
     section.landing > div {
         text-align: center;
     }
     div.landing-cta {
         width: 100%;
+    }
+}
+@media (max-width: 525px) {
+    div.landing-cta {
+
     }
 }
 /* end nav */
@@ -277,11 +283,19 @@ div.play a.play-desc {
         z-index: -1;
         opacity: 0.35;
     }
+    section.landing div.landing-image {
+        display: flex;
+        justify-content: center;
+    }
     section.landing div.landing-image img {
-        margin-top: 80px;
-}
+        width: 60%;
+    }
 }
 @media (max-width: 768px) {
+    .top-nav {
+        display: flex;
+        flex-direction: column;
+    }
     div.landing-desc {
         flex-basis: 40%;
     }
@@ -292,6 +306,27 @@ div.play a.play-desc {
     div.landing-desc p {
         font-size: 0.8em;
         line-height: 20px;
+    }
+    section.landing div.landing-image img {
+        display: none;
+    }
+}
+@media (max-width: 525px) {
+    div.landing-cta a.find-out {
+        width: initial;
+        height: initial;
+        line-height: initial;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    div.play a.play-button {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+    }
+    div.play {
+        justify-content: center;
+        width: initial;
     }
 }
 /* end landing */
@@ -327,13 +362,12 @@ div.category-items {
 }
 div.category-items .box {
     flex-basis: 24%;
+    padding: 20px;
 }
 div.category-items .box {
-    padding: 15px;
+    margin: 10px 15px;
 }
-div.category-items .box:not(:last-child) {
-    margin-right: 15px;
-}
+
 div.category-items .box {
     position: relative;
     background-color: white;
@@ -540,6 +574,9 @@ div.booking-trip {
 div.step-item {
     display: flex;
     margin-bottom: 48px;    
+}
+div.step-item > div {
+    margin: 10px;
 }
 p.booking-header {
 	font-weight: 600;
@@ -762,6 +799,7 @@ section.testimonials p.testimonials-header {
     line-height: 100%;
     text-transform: uppercase;
     color: #5E6282;
+    margin: 10px;
 }
 section.testimonials .content {
     font-family: serif;
@@ -770,11 +808,11 @@ section.testimonials .content {
     line-height: 100%;
     font-weight: 700;
     font-size: 50px;
-    margin-top: 10px;
-    
+    margin: 10px;
 }
 section.testimonials div.swipe {
 	display: flex;
+    margin: 10px;
 	margin-top: 82px;
 }
 section.testimonials div.swipe span {
@@ -976,7 +1014,9 @@ section.subscribe div.subscribe-field {
     justify-content: center;
     align-content:space-between;
     margin-top: 74px;
-
+}
+section.subscribe div.subscribe-field > div {
+    flex-basis: 100%;
 }
 section.subscribe div.subscribe-field div.email {
     position: relative;
@@ -993,12 +1033,17 @@ section.subscribe div.subscribe-field input {
     border-radius: 10px;
     height: 68px;
 }
+section.subscribe div.subscribe-field .email {
+    margin-left: 24px;
+    margin-right: 24px;
+    max-width: 420px;
+    min-width: 200px;
+}
 section.subscribe div.subscribe-field input[type="email"] {
     border: none;
-    width: 420px;
-    margin-right: 24px;
     padding-left: 66px;
     position: relative;
+    width: 100%;
 }
 section.subscribe div.subscribe-field input[type="email"]::before {
     content: "\f0e0";
@@ -1041,9 +1086,11 @@ div.wrapper-container img.ellipse-left {
     section.subscribe div.subscribe-desc {
         font-size: 1.7em;
     }
-    /* section.subscribe div.subscribe-field input[type="submit"] {
-        margin-top: 20px;
-    } */
+}
+@media (max-width: 525px) {
+    section.subscribe div.wrapper-container {
+        max-width: 420px;
+    }   
 }
 /* end subscribe */
 /* start contact */
