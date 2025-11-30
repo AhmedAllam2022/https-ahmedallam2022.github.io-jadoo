@@ -886,8 +886,14 @@ div.testimonial div.scroll-buttons {
     section.testimonials .container {
         flex-direction: column;
     }
+    
     div.testimonials-left {
-        margin-bottom: 50px
+        margin-bottom: 50px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    section.testimonials div.swipe {
+        justify-content: center;
     }
 }
 /* end testimonials */
@@ -902,6 +908,9 @@ section.brands div.container div {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+section.brands div.container a div {
+    margin: 10px 15px;
 }
 section.brands div.container a:nth-child(1) div {
     background-image: url(../Images/5be7b30f1023e0bec0dfa8fb71138b45f6a9580f.png);
